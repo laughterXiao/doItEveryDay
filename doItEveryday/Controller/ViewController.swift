@@ -14,9 +14,12 @@ class ViewController: UIViewController,UICollectionViewDataSource,UICollectionVi
     @IBOutlet weak var monthLabel: UILabel!
     
     @IBAction func nextMonth(_ sender: Any) {
-        calendarTime.moveMonth(delta: 1)
-        calendarView.reloadData()
-        monthLabel.text = calendarTime.getMonthYearName()
+//        calendarTime.moveMonth(delta: 1)
+//        calendarView.reloadData()
+//        monthLabel.text = calendarTime.getMonthYearName()
+        if let controller = storyboard?.instantiateViewController(withIdentifier: "testView") {
+            present(controller, animated: true, completion: nil)
+        }
     }
     
     @IBAction func preMonth(_ sender: Any) {
@@ -70,11 +73,6 @@ class ViewController: UIViewController,UICollectionViewDataSource,UICollectionVi
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-//        calendarView.dataSource = self
-//        calendarView.delegate = self
     }
-    
-    
-
 }
 

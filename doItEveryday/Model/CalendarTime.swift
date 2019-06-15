@@ -19,7 +19,6 @@ class CalendarTime {
         year = com.year!
         month = com.month!
         day = com.day!
-//        month=11
     }
 
     func moveMonth(delta:Int){
@@ -32,12 +31,11 @@ class CalendarTime {
             month=12
             year = year-1
         }
-        
     }
+    
     func getNowMonthDaysCount() ->Int {
         let calendar = Calendar(identifier:Calendar.Identifier.gregorian)
-        let range = (calendar as NSCalendar?)?.range(of: NSCalendar.Unit.day, in: NSCalendar.Unit.month, for: getNowTimeDate())
-        
+        let range = (calendar as NSCalendar?)?.range(of: NSCalendar.Unit.day, in: NSCalendar.Unit.month, for: getNowTimeDate(day:day))
         return (range?.length)!
     }
     
@@ -45,14 +43,10 @@ class CalendarTime {
         let calendar = Calendar(identifier:Calendar.Identifier.gregorian)
         var firstWeekDay = (calendar as NSCalendar?)?.ordinality(of: NSCalendar.Unit.weekday, in: NSCalendar.Unit.weekOfMonth, for: getNowTimeDate())
         firstWeekDay = firstWeekDay!-1
-//        if firstWeekDay==0 {
-//            firstWeekDay=7
-//        }
-        print(firstWeekDay)
         return firstWeekDay!
     }
     
-    func getNowTimeDate(dateFormat:String="yyyy-MM-dd") -> Date{
+    func getNowTimeDate(day:Int=1,dateFormat:String="yyyy-MM-dd") -> Date{
         let dateFormatter = DateFormatter.init()
         dateFormatter.dateFormat = dateFormat
         let timeString:String = String(year)+"-"+String(month)+"-1"
