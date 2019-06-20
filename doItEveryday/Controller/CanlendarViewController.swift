@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController,UICollectionViewDataSource,UICollectionViewDelegate,UICollectionViewDelegateFlowLayout {
+class CanlendarViewController: UIViewController,UICollectionViewDataSource,UICollectionViewDelegate,UICollectionViewDelegateFlowLayout {
     let calendarTime:CalendarTime = CalendarTime.init()
     @IBOutlet weak var calendarView: UICollectionView!
     @IBOutlet weak var monthLabel: UILabel!

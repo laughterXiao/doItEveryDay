@@ -3,31 +3,41 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		D80BDD9822ABF63700EA12E5 /* CalendarTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = D80BDD9722ABF63700EA12E5 /* CalendarTime.swift */; };
 		D831F5AF22AA2CC000EAF996 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D831F5AE22AA2CC000EAF996 /* AppDelegate.swift */; };
-		D831F5B122AA2CC000EAF996 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D831F5B022AA2CC000EAF996 /* ViewController.swift */; };
+		D831F5B122AA2CC000EAF996 /* CanlendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D831F5B022AA2CC000EAF996 /* CanlendarViewController.swift */; };
 		D831F5B422AA2CC000EAF996 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D831F5B222AA2CC000EAF996 /* Main.storyboard */; };
 		D831F5B622AA2CC400EAF996 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D831F5B522AA2CC400EAF996 /* Assets.xcassets */; };
 		D831F5B922AA2CC400EAF996 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D831F5B722AA2CC400EAF996 /* LaunchScreen.storyboard */; };
+		D83594A722B644560082303F /* DB_doit_item.swift in Sources */ = {isa = PBXBuildFile; fileRef = D83594A622B644560082303F /* DB_doit_item.swift */; };
 		D841D11822AEAB1500D61C6B /* DoListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D841D11722AEAB1500D61C6B /* DoListViewController.swift */; };
 		D841D11A22B39B8900D61C6B /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D841D11922B39B8900D61C6B /* TableViewCell.swift */; };
+		D841D11C22B4D96100D61C6B /* SqliteOperate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D841D11B22B4D96100D61C6B /* SqliteOperate.swift */; };
+		D89A6DC4FE3411FECD29AF94 /* Pods_doItEveryday.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7823C2A8463199B0C5193600 /* Pods_doItEveryday.framework */; settings = {ATTRIBUTES = (Required, ); }; };
+		D89FCF4322B94A6700227950 /* DB_doit_record.swift in Sources */ = {isa = PBXBuildFile; fileRef = D89FCF4222B94A6700227950 /* DB_doit_record.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7823C2A8463199B0C5193600 /* Pods_doItEveryday.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_doItEveryday.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D62E5A3758AF0DD3EB680EFD /* Pods-doItEveryday.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-doItEveryday.debug.xcconfig"; path = "Target Support Files/Pods-doItEveryday/Pods-doItEveryday.debug.xcconfig"; sourceTree = "<group>"; };
 		D80BDD9722ABF63700EA12E5 /* CalendarTime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarTime.swift; sourceTree = "<group>"; };
 		D831F5AB22AA2CC000EAF996 /* doItEveryday.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = doItEveryday.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D831F5AE22AA2CC000EAF996 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		D831F5B022AA2CC000EAF996 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		D831F5B022AA2CC000EAF996 /* CanlendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanlendarViewController.swift; sourceTree = "<group>"; };
 		D831F5B322AA2CC000EAF996 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D831F5B522AA2CC400EAF996 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D831F5B822AA2CC400EAF996 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D831F5BA22AA2CC400EAF996 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D83594A622B644560082303F /* DB_doit_item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DB_doit_item.swift; sourceTree = "<group>"; };
 		D841D11722AEAB1500D61C6B /* DoListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoListViewController.swift; sourceTree = "<group>"; };
 		D841D11922B39B8900D61C6B /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		D841D11B22B4D96100D61C6B /* SqliteOperate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SqliteOperate.swift; sourceTree = "<group>"; };
+		D89FCF4222B94A6700227950 /* DB_doit_record.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DB_doit_record.swift; sourceTree = "<group>"; };
+		FD8FB7417C9545C10BD7CEEE /* Pods-doItEveryday.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-doItEveryday.release.xcconfig"; path = "Target Support Files/Pods-doItEveryday/Pods-doItEveryday.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,17 +45,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D89A6DC4FE3411FECD29AF94 /* Pods_doItEveryday.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0703FD4468FAAB68694D3DE2 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D62E5A3758AF0DD3EB680EFD /* Pods-doItEveryday.debug.xcconfig */,
+				FD8FB7417C9545C10BD7CEEE /* Pods-doItEveryday.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		5326380FDD0AC6CDD3C75B48 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7823C2A8463199B0C5193600 /* Pods_doItEveryday.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		D831F5A222AA2CC000EAF996 = {
 			isa = PBXGroup;
 			children = (
 				D831F5AD22AA2CC000EAF996 /* doItEveryday */,
 				D831F5AC22AA2CC000EAF996 /* Products */,
+				0703FD4468FAAB68694D3DE2 /* Pods */,
+				5326380FDD0AC6CDD3C75B48 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -76,6 +106,9 @@
 			children = (
 				D80BDD9722ABF63700EA12E5 /* CalendarTime.swift */,
 				D841D11922B39B8900D61C6B /* TableViewCell.swift */,
+				D841D11B22B4D96100D61C6B /* SqliteOperate.swift */,
+				D83594A622B644560082303F /* DB_doit_item.swift */,
+				D89FCF4222B94A6700227950 /* DB_doit_record.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -83,7 +116,7 @@
 		D841D11622AEAAC800D61C6B /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				D831F5B022AA2CC000EAF996 /* ViewController.swift */,
+				D831F5B022AA2CC000EAF996 /* CanlendarViewController.swift */,
 				D841D11722AEAB1500D61C6B /* DoListViewController.swift */,
 			);
 			path = Controller;
@@ -96,9 +129,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D831F5BD22AA2CC400EAF996 /* Build configuration list for PBXNativeTarget "doItEveryday" */;
 			buildPhases = (
+				BA41207D1D2E0C56DDF2AB1B /* [CP] Check Pods Manifest.lock */,
 				D831F5A722AA2CC000EAF996 /* Sources */,
 				D831F5A822AA2CC000EAF996 /* Frameworks */,
 				D831F5A922AA2CC000EAF996 /* Resources */,
+				65B9CC93D8A1F7B9D002390D /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -155,16 +190,61 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		65B9CC93D8A1F7B9D002390D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-doItEveryday/Pods-doItEveryday-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-doItEveryday/Pods-doItEveryday-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-doItEveryday/Pods-doItEveryday-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BA41207D1D2E0C56DDF2AB1B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-doItEveryday-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		D831F5A722AA2CC000EAF996 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				D841D11A22B39B8900D61C6B /* TableViewCell.swift in Sources */,
-				D831F5B122AA2CC000EAF996 /* ViewController.swift in Sources */,
+				D831F5B122AA2CC000EAF996 /* CanlendarViewController.swift in Sources */,
+				D89FCF4322B94A6700227950 /* DB_doit_record.swift in Sources */,
+				D841D11C22B4D96100D61C6B /* SqliteOperate.swift in Sources */,
 				D831F5AF22AA2CC000EAF996 /* AppDelegate.swift in Sources */,
 				D80BDD9822ABF63700EA12E5 /* CalendarTime.swift in Sources */,
 				D841D11822AEAB1500D61C6B /* DoListViewController.swift in Sources */,
+				D83594A722B644560082303F /* DB_doit_item.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -308,15 +388,18 @@
 		};
 		D831F5BE22AA2CC400EAF996 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D62E5A3758AF0DD3EB680EFD /* Pods-doItEveryday.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = GU4JT9S56A;
 				INFOPLIST_FILE = doItEveryday/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.laughterXiao.doItEveryday;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -326,15 +409,18 @@
 		};
 		D831F5BF22AA2CC400EAF996 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FD8FB7417C9545C10BD7CEEE /* Pods-doItEveryday.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = GU4JT9S56A;
 				INFOPLIST_FILE = doItEveryday/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.laughterXiao.doItEveryday;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
