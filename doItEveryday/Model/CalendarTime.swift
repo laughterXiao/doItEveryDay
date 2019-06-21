@@ -51,7 +51,6 @@ class CalendarTime {
         dateFormatter.dateFormat = dateFormat
         let timeString:String = String(year)+"-"+String(month)+"-1"
         let date = dateFormatter.date(from: timeString)!
-        print(timeString)
         return date
     }
     

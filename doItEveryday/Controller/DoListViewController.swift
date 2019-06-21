@@ -13,8 +13,6 @@ class DoListViewController:UIViewController,UITableViewDelegate,UITableViewDataS
 
 
     @IBOutlet weak var tableView: UITableView!
-//    var doListTitleArray = ["一二三四五六七","看一篇英文文章","運動","看英文影片"]
-//    var doListContentArray = ["一二三四五六七八九十\n一二三四五六七八九十\n一二三四五六七八九十\n一二三四五六七八九十\n一二三四五六七八九十","看一篇英文文章看一篇英文文章","運動","看英文影片"]
     var doListTitleArray:Array<String> = Array()
     var doListContentArray:Array<String> = Array()
     
