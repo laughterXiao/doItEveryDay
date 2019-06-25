@@ -27,13 +27,21 @@ class SqliteOperate{
     static func checkTabelExsist(){
             //conect
             let db = SqliteOperate.getDBConnection()
-            
-            //check doit_item
             let doit_item = Table("doit_item")
+//            drop
+//            do {
+//                try db?.run(doit_item.drop())
+//                print("drop")
+//            } catch let error {
+//                print(error)
+//            }
+            //check doit_item
+        
             do {
                 // test table exist
                 try db?.scalar(doit_item.exists)
             } catch let error{
+                print("create doit_item")
                 print("Not exist: \(error)")
                 //create table
                 do {
@@ -42,6 +50,7 @@ class SqliteOperate{
                         t.column(DB_doit_item.column_title)
                         t.column(DB_doit_item.column_discript)
                         t.column(DB_doit_item.column_remindTime)
+                        t.column(DB_doit_item.column_startTime)
                     })
                 } catch let createError {
                     print("createError is: \(createError)")
@@ -51,10 +60,19 @@ class SqliteOperate{
             
             //check doit_record
             let doit_record = Table("doit_record")
+//            drop
+//            do {
+//                try db?.run(doit_record.drop())
+//                print("drop")
+//            } catch let error {
+//                print(error)
+//            }
+
             do {
                 // test table exist
                 try db?.scalar(doit_record.exists)
             } catch let error1{
+                print("create doit_record")
                 print("Not exist: \(error1)")
                 //create table
                 do {

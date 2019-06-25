@@ -24,17 +24,33 @@ class CalendarData:NSObject,UICollectionViewDelegate,UICollectionViewDataSource,
     //每格的內容
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "mainCell", for: indexPath)
+        //clearn
+        if let label = cell.contentView.subviews[0] as? UILabel{
+            label.text = ""
+        }
+        if let image = cell.contentView.subviews[1] as? UIImageView{
+            image.image = nil
+        }
+        cell.layer.borderWidth = 0
+        //setting
         if let textLabel = cell.contentView.subviews[0] as? UILabel{
             let monthFirstDay = calendarTime.getMonthFirstWeekDay()
             if indexPath.row+1-monthFirstDay>0 {
                 textLabel.text = String(indexPath.row+1-monthFirstDay)
-                if let image = cell.contentView.subviews[1] as? UIImageView{
-                    image.image = UIImage(imageLiteralResourceName: "fail")
+                if let imageType=calendarTime.doitCalendar[indexPath.row-monthFirstDay]{
+                    if let image = cell.contentView.subviews[1] as? UIImageView{
+                        if imageType==false{
+                            image.image = UIImage(imageLiteralResourceName: "fail")
+                        }else if imageType==true{
+                            image.image = UIImage(imageLiteralResourceName: "success-2")
+                        }
+                    }
                 }
             }else{
                 textLabel.text = ""
             }
-            if indexPath.row+1-monthFirstDay==calendarTime.day{
+            let com = Calendar.current.dateComponents([.year,.month,.day], from: Date())
+            if com.year==calendarTime.year && com.month==calendarTime.month && indexPath.row+1-monthFirstDay==calendarTime.day{
                 cell.layer.borderWidth = 2.0
                 cell.layer.borderColor = UIColor.red.cgColor
             }

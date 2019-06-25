@@ -31,7 +31,7 @@ class DoListViewController:UIViewController,UITableViewDelegate,UITableViewDataS
     }
     
     
-    func numberOfSections(in collectionView: UICollectionView) -> Int {
+    private func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1
     }
     
@@ -45,11 +45,11 @@ class DoListViewController:UIViewController,UITableViewDelegate,UITableViewDataS
 
         
         SqliteOperate.checkTabelExsist()
-        let now:Date = Date()
-        let dateFormat:DateFormatter = DateFormatter()
-        dateFormat.dateFormat = "yyyy-MM-dd HH:mm:ss"
-        let dateString:String = dateFormat.string(from: now)
+//        let now:Date = Date()
+//        let dateFormat:DateFormatter = DateFormatter()
+//        dateFormat.dateFormat = "yyyy-MM-dd HH:mm:ss"
+//        let dateString:String = dateFormat.string(from: now)
 //        DB_doit_record.insert(itemIDInt: 1, column_recordTimeStr: dateString)
-        DB_doit_record.selectAll()
+//        DB_doit_record.selectAll()
     }
 }
