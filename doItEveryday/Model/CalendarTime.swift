@@ -76,7 +76,7 @@ class CalendarTime {
         for _ in 0...30{
             doitArray.append(nil)
         }
-        if startYear==year && startMonth==month{
+        if startYear==year && startMonth==month && startDay!<day{
             for i in startDay!-1...day-2{
                 doitArray[i] = false
             }

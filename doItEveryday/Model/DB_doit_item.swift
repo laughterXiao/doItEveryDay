@@ -28,13 +28,23 @@ class DB_doit_item {
         startTime = startTimeStr
     }
     
-    static func insert(titleStr:String, discriptStr:String, remindTimeInt:Int, startTimeStr:String){
+    static func insert(titleStr:String, discriptStr:String, remindTimeInt:Int, startTimeStr:String=""){
         //table
         let doit_item = Table("doit_item")
         //insert data to table
         if let db = SqliteOperate.getDBConnection(){
             do {
-                let insert = doit_item.insert(column_title <- titleStr, column_discript <- discriptStr, column_remindTime <- remindTimeInt, column_startTime <- startTimeStr)
+                var settingTime:String
+                if startTimeStr==""{
+                    let now:Date = Date()
+                    let dateFormat:DateFormatter = DateFormatter()
+                    dateFormat.dateFormat = "yyyy-MM-dd HH:mm:ss"
+                    let dateString:String = dateFormat.string(from: now)
+                    settingTime = dateString
+                }else{
+                    settingTime = startTimeStr
+                }
+                let insert = doit_item.insert(column_title <- titleStr, column_discript <- discriptStr, column_remindTime <- remindTimeInt, column_startTime <- settingTime)
                 try db.run(insert)
             } catch let error {
                 print("insert error: \(error)")
@@ -51,7 +61,7 @@ class DB_doit_item {
         if let db = SqliteOperate.getDBConnection(){
             do {
                 for item in try db.prepare(doit_item) {
-                    print("id: \(item[column_id]), startTime:\(item[column_startTime]), title: \(item[column_title]), discript: \(item[column_discript]), remindTime:\(item[column_remindTime])")
+//                    print("id: \(item[column_id]), startTime:\(item[column_startTime]), title: \(item[column_title]), discript: \(item[column_discript]), remindTime:\(item[column_remindTime])")
                     allData.append(DB_doit_item(idInt: item[column_id], titleStr: item[column_title], discriptStr: item[column_discript], remindTimeInt: item[column_remindTime], startTimeStr: item[column_startTime]))
                 }
             } catch let error {
@@ -63,10 +73,29 @@ class DB_doit_item {
         return allData
     }
     
-    func update() {
-        
+    func update(title:String, descript:String, remindTime:Int) {
+        let sql = "UPDATE doit_item SET title='\(title)',discript='\(descript)',remindTime=\(remindTime) WHERE id=\(self.id)"
+        if let db = SqliteOperate.getDBConnection(){
+            do {
+                try db.run(sql)
+            } catch let error {
+                print("update error: \(error)")
+            }
+        }else{
+            print("DBConnection Error")
+        }
     }
     
     func delete() {
+        let sql = "DELETE FROM doit_item WHERE id=\(self.id)"
+        if let db = SqliteOperate.getDBConnection(){
+            do {
+                try db.run(sql)
+            } catch let error {
+                print("delete error: \(error)")
+            }
+        }else{
+            print("DBConnection Error")
+        }
     }
 }

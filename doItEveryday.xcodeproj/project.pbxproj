@@ -19,6 +19,7 @@
 		D841D11C22B4D96100D61C6B /* SqliteOperate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D841D11B22B4D96100D61C6B /* SqliteOperate.swift */; };
 		D852580622BBD3A400FD4607 /* MainMenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D852580522BBD3A400FD4607 /* MainMenuController.swift */; };
 		D852580A22BCEB4400FD4607 /* CalendarData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D852580922BCEB4400FD4607 /* CalendarData.swift */; };
+		D894651F22C44B940090BB02 /* NewItemController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D894651E22C44B940090BB02 /* NewItemController.swift */; };
 		D89A6DC4FE3411FECD29AF94 /* Pods_doItEveryday.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7823C2A8463199B0C5193600 /* Pods_doItEveryday.framework */; settings = {ATTRIBUTES = (Required, ); }; };
 		D89FCF4322B94A6700227950 /* DB_doit_record.swift in Sources */ = {isa = PBXBuildFile; fileRef = D89FCF4222B94A6700227950 /* DB_doit_record.swift */; };
 /* End PBXBuildFile section */
@@ -40,6 +41,7 @@
 		D841D11B22B4D96100D61C6B /* SqliteOperate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SqliteOperate.swift; sourceTree = "<group>"; };
 		D852580522BBD3A400FD4607 /* MainMenuController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuController.swift; sourceTree = "<group>"; };
 		D852580922BCEB4400FD4607 /* CalendarData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarData.swift; sourceTree = "<group>"; };
+		D894651E22C44B940090BB02 /* NewItemController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewItemController.swift; sourceTree = "<group>"; };
 		D89FCF4222B94A6700227950 /* DB_doit_record.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DB_doit_record.swift; sourceTree = "<group>"; };
 		FD8FB7417C9545C10BD7CEEE /* Pods-doItEveryday.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-doItEveryday.release.xcconfig"; path = "Target Support Files/Pods-doItEveryday/Pods-doItEveryday.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -124,6 +126,7 @@
 				D831F5B022AA2CC000EAF996 /* CanlendarViewController.swift */,
 				D841D11722AEAB1500D61C6B /* DoListViewController.swift */,
 				D852580522BBD3A400FD4607 /* MainMenuController.swift */,
+				D894651E22C44B940090BB02 /* NewItemController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -250,6 +253,7 @@
 				D831F5AF22AA2CC000EAF996 /* AppDelegate.swift in Sources */,
 				D80BDD9822ABF63700EA12E5 /* CalendarTime.swift in Sources */,
 				D841D11822AEAB1500D61C6B /* DoListViewController.swift in Sources */,
+				D894651F22C44B940090BB02 /* NewItemController.swift in Sources */,
 				D852580A22BCEB4400FD4607 /* CalendarData.swift in Sources */,
 				D83594A722B644560082303F /* DB_doit_item.swift in Sources */,
 				D852580622BBD3A400FD4607 /* MainMenuController.swift in Sources */,

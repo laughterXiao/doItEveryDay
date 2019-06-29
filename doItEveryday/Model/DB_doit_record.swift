@@ -102,11 +102,37 @@ class DB_doit_record {
         return allData
     }
     
+    static func select(itemID:Int) ->Array<DB_doit_record> {
+        var allData:Array<DB_doit_record> = Array()
+        let sql = "SELECT * FROM doit_record WHERE itemID=\(itemID)"
+        if let db = SqliteOperate.getDBConnection(){
+            do {
+                for item in try db.prepare(sql) {
+                    allData.append(DB_doit_record(idInt: Int(item[0] as! Int64), itemIDInt: Int(item[1] as! Int64), recordTimeStr: item[2] as! String))
+                }
+            } catch let error {
+                print("select error: \(error)")
+            }
+        }else{
+            print("DBConnection Error")
+        }
+        return allData
+    }
+    
     func update() {
         
     }
     
     func delete() {
-        
+        let sql = "DELETE FROM doit_record WHERE id=\(self.id)"
+        if let db = SqliteOperate.getDBConnection(){
+            do {
+                try db.run(sql)
+            } catch let error {
+                print("select error: \(error)")
+            }
+        }else{
+            print("DBConnection Error")
+        }
     }
 }

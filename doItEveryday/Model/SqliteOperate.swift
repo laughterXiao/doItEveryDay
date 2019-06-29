@@ -41,7 +41,6 @@ class SqliteOperate{
                 // test table exist
                 try db?.scalar(doit_item.exists)
             } catch let error{
-                print("create doit_item")
                 print("Not exist: \(error)")
                 //create table
                 do {
